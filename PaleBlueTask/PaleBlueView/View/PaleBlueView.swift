@@ -27,7 +27,6 @@ struct PaleBlueView: View {
                         
                         ForEach (Array(viewModel.hits.enumerated()),id: \.offset) {index, item in
                             PhotoGrid(imageLink: item.largeImageURL, name: item.user, id: "\(item.id)")
-                                .padding(.all, 8)
                                 .onAppear{
                                     if (viewModel.hits.count < viewModel.total && index == viewModel.hits.count - 1) {
                                         viewModel.currentPage += 1
@@ -36,11 +35,12 @@ struct PaleBlueView: View {
                                         }
                                     }
                                 }
+                                .padding(.horizontal, 8)
                         }
-
+                        .padding(.all, 8)
                     }
                 }
-                .padding()
+                .padding(.horizontal, 16)
             }
         }
     }

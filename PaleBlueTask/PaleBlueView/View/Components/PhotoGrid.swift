@@ -35,15 +35,15 @@ struct PhotoGrid: View {
                     Text("Author:")
                         .font(.system(size: 14, weight: .bold))
                     Text(name)
-                        .font(.system(size: 10, weight: .bold))
+                        .font(.system(size: 14, weight: .bold))
                 }
-                .padding(.bottom)
+                .padding(.bottom, 12)
                 
                 VStack(alignment: .leading) {
                     Text("Photo ID:")
-                        .font(.system(size: 20))
+                        .font(.system(size: 10))
                     Text(id)
-                        .font(.system(size: 20))
+                        .font(.system(size: 10))
                 }
             }
             
